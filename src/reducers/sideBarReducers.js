@@ -16,6 +16,10 @@ const sidebarReducer=(state,action) => {
                 ...state,
                 isSidebarOpen: false
             }
-        
+        default:
+            return state;
     }
 }
+
+
+export default sidebarReducer;
