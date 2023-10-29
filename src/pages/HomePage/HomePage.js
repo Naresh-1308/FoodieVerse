@@ -1,8 +1,13 @@
 import React from 'react'
+import "./HomePage.scss";
+import { useMealContext } from '../../context/mealContext';
+
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <main className='main-content'>
+
+    </main>
   )
 }
 

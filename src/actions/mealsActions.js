@@ -2,7 +2,8 @@ import axios from "../api/axios";
 import {
     FETCH_CATEGORY_BEGIN,
     FETCH_CATEGORY_ERROR,
-    FETCH_CATEGORY_SUCCESS
+    FETCH_CATEGORY_SUCCESS,
+    FETCH_SINGLE_MEAL_BEGIN
 } from "./actions.js";
 
 
@@ -20,4 +21,11 @@ export const startFetchCategories = async(dispatch) => {
         dispatch({type: FETCH_CATEGORY_ERROR, payload: error.message});
     }
 
+}
+
+export const startFetchSingleMeal = async(dispatch, id) => {
+    try{
+        dispatch({ type: FETCH_SINGLE_MEAL_BEGIN });
+        const respone = await axios.get(`${}`)
+    }
 }

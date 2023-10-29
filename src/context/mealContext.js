@@ -9,7 +9,13 @@ const initialState={
     categoryError: false,
     categoryMeals: [],
     categoryMealsLoading: false,
-    categoryMealsError: false
+    categoryMealsError: false,
+    meals: [],
+    mealsLoading: false,
+    mealsError: false,
+    meal: [],
+    mealLoading: false,
+    mealError: false
 }
 
 
