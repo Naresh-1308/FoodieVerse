@@ -19,4 +19,5 @@ export const startFetchCategories = async(dispatch) => {
     catch(error) {
         dispatch({type: FETCH_CATEGORY_ERROR, payload: error.message});
     }
+
 }

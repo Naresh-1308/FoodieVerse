@@ -1,5 +1,6 @@
 import React,{createContext, useContext, useEffect, useReducer} from "react";
 import { mealReducer } from "../reducers/mealReducers";
+import {startFetchCategories} from "../actions/mealsActions"
 
 
 const initialState={
@@ -14,17 +15,18 @@ const initialState={
 
 const MealContext = createContext({});
 
-export const MealProvider ({children}) => {
+export const MealProvider = ({children}) => {
     const [state, dispatch] = useReducer(mealReducer, initialState);
 
     useEffect (() => {
-
+            startFetchCategories(dispatch);
     },[]);
 
     return (
         <MealContext.Provider value ={{
             ...state,
-            dispatch
+            dispatch,
+            startFetchCategories
         }}>
             {children}
         </MealContext.Provider>

@@ -3,10 +3,13 @@ import { useSidebarContext } from '../../context/sideBarContext'
 import {ImCancelCircle} from "react-icons/im"
 import "./Sidebar.scss"
 import { Link } from 'react-router-dom'
+import { useMealContext } from '../../context/mealContext'
 
 const Sidebar = () => {
   const {isSidebarOpen, closeSidebar}= useSidebarContext();
   //console.log(isSidebarOpen) it shows false bezoc side bar is not opened
+
+  const {categories}= useMealContext()
   return (
     <nav className={`sidebar ${isSidebarOpen ? 'sidebar-visible' : " "}`}>
       <button type="button" className='navbar-hide-btn' onClick={()=> closeSidebar()
@@ -15,11 +18,15 @@ const Sidebar = () => {
       </button>
       <div className='side-content'>
         <ul className='side-nav'>
-          <li className='side-item'>
-            <Link to="" className='side-link ls-1 fs-13' onClick={()=> closeSidebar()}>
-              Side Link Here
-            </Link>
-          </li>
+          {
+            categories.map(category => (
+              <li className='side-item' key={category.idCategory}>
+                <Link to={'/meal/category/${category.strCategory}'} className='side-link ls-1 fs-13' onClick={()=> closeSidebar()}>
+                  {category.strCategory}
+                </Link>
+              </li>
+            ))
+          }
         </ul>
       </div>
     </nav>
