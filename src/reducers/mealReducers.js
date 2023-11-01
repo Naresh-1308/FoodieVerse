@@ -37,7 +37,7 @@ export const mealReducer = (state, action)=>{
                 ...state,
                 mealsLoading: true
             }
-        case FETCH_MEALS_SUCCESS:
+        case FETCH_MEALS_SUCCESS:   
             return{
                 ...state,
                 mealsLoading: false,

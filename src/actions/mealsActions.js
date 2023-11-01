@@ -63,7 +63,7 @@ export const startFetchMealByCategory = async(dispatch, category) => {
 export const startFetchMealsBySearch = async(dispatch, searchTerm) => {
     try{
         dispatch({type: FETCH_MEALS_BEGIN});
-        const response = await axios.get(`${SEARCH_URL}${searchTerm}`);
+        const response = await axios.get(`${SEARCH_URL}${searchTerm}`); 
         dispatch({type: FETCH_MEALS_SUCCESS, payload: response.data.meals});
     }
     
