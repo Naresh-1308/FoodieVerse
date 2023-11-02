@@ -15,6 +15,8 @@
         grid-template-columns: repeat(5, 1fr);
     }
 
+    
+
     .meal-itm{
         box-shadow: rgba(99, 99, 99, 0.09) 0px 2px 8px 0px;
         &-img{
@@ -70,6 +72,7 @@
             }
             .source{
                 a{
+                    color: teal;
                     &:hover{
                         color: $clr-orange;
                     }
@@ -90,7 +93,8 @@
                 }
             }
             .ingredients{
-                background-color: $clr-orange;
+                background-color: teal;
+                border-radius: 10px;
 
                 h6{
                     margin-right: 12px;
@@ -119,8 +123,8 @@
 
                         .li-dot{
                             box-shadow: rgba(0, 0, 0, 0.09) 0px 1px 1px;
-                            background-color: $clr-green;
-                            color: $clr-white;
+                            background-color: $clr-white;
+                            color: $clr-orange;
                             width: 20px;
                             height: 20px;
                             display: inline-flex;

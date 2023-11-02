@@ -15,7 +15,7 @@ import {
 } from "./actions.js";
 
 
-import { CATEGORIES_URL, MEAL_CATEGORIES_URL, MEAL_SINGLE_URL, SEARCH_URL } from "../utils/constants";
+import { CATEGORIES_URL, MEAL_CATEGORIES_URL, MEAL_SINGLE_URL, SEARCH_URL, SEARCH_RANDOM_URL } from "../utils/constants";
 
 export const startFetchCategories = async(dispatch) => {
     try{

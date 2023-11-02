@@ -9,7 +9,7 @@ const CategoryList = ({ categories }) => {
     <div className='section-wrapper bg-whitesmoke'>
       <div className='container'>
         <div className='sc-title'>
-          categories
+          Categories
         </div>
         <section className='sc-category grid'>
           {
@@ -17,7 +17,7 @@ const CategoryList = ({ categories }) => {
               const { idCategory: id, strCategory: title, strCategoryThumb: thumbnail } = category;
 
               return (
-                <Link to = {`meal/category/${title}`} className = 'category-itm align-center justify-center' key = {id} >
+                <Link to = {`/`} className = 'category-itm align-center justify-center' key = {id} >
                   <div className='category-itm-img h-100 w-100 flex align-center justify-center'>
                     <img src= {thumbnail} alt= {title} />
                     <div className='category-itm-title bg-orange'>

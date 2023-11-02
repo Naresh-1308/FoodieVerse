@@ -47,8 +47,8 @@ const MealDetailsPage = () => {
 
   return (
     <main className='main-content bg-whitesmoke'> 
-     { (mealLoading)? <Loader/>: <MealSingle meal= {singleMeal} /> }
-     {(categoryLoading)? <Loader/>: <CategoryList categories={categories} />}
+      { (mealLoading)? <Loader/>: <MealSingle meal= {singleMeal} /> }
+      { (categoryLoading)? <Loader/>: <CategoryList categories={categories} /> }
     
 
     </main>
